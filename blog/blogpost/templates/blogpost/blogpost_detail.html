@@ -1,4 +1,6 @@
 {% extends 'blogpost/base.html' %}
+{% load comments %}
+
 {% block head_title %}{{ post.title }}{% endblock %}
 {% block title %}{{ post.title }}{% endblock %}
 
@@ -6,4 +8,7 @@
 <h2><a href="{{ post.get_abs_url }}">{{ post.title }}</a></h2>
 <p>{{post.posted}} - By {{post.author}}</p>
 <p>{{post.body}}</p>
+
+{% render_comment_list for post %}
+
 {% endblock %}

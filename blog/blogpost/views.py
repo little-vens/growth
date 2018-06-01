@@ -14,4 +14,5 @@ def view_post(request, slug):
     })
 
 
+
 # Create your views here.
